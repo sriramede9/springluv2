@@ -16,10 +16,26 @@
     </bean>
     
     <!-- Coach with base ballcoach bean -->
-    <bean id="myCoach" class="com.springdemo.Baseballcoach">
-    <constructor-arg ref="myFortune"/>
+    <bean id="myCoach" class="com.springdemo.CrictetCoach">
     
     
+    <!-- if consttructor dependency then <constructor-args ref="myFortune"></constructor-args> -->
+    
+    
+    <!-- setting to setFortuneService method in crictecoach and sendig myfortune which is happyfortune obj to seeterr method -->
+    <property name="FortuneService" ref="myFortune"></property>
+    
+    <!-- setting literals using setter methods -->
+    <property name="Team" value="Stingers"></property>
+    <property name="EmailAddress" value="jani@nabondha.com"></property>
+    
+    
+    
+    </bean>
+    
+    <bean id="bbCoach" class="com.springdemo.Baseballcoach">
+    
+    <constructor-arg ref="myFortune"></constructor-arg>
     
     </bean>
 </beans>

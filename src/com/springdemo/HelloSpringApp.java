@@ -12,8 +12,12 @@ public class HelloSpringApp {
 		
 		//retreive bean
 		
-		Coach bbCoach=context.getBean("myCoach",Coach.class);
+		Coach ccCoach=context.getBean("myCoach",Coach.class);
 		//call lmethods on bean
+		
+		System.out.println(ccCoach.getDailyWorkout()+"syss"+ccCoach.GetDailyFortune());
+		
+		Coach bbCoach=context.getBean("bbCoach",Coach.class);
 		
 		System.out.println(bbCoach.getDailyWorkout()+"syss"+bbCoach.GetDailyFortune());
 		
