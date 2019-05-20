@@ -8,4 +8,10 @@ public class TrackCoach implements Coach {
 		return "Run on Sand with 5 kilo weight in you backpack";
 	}
 
+	@Override
+	public String GetDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
