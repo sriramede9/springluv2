@@ -10,8 +10,7 @@
 
 	<!-- properties file -->
 
-	<context:property-placeholder
-		location="classpath:sport.properties" />
+	
 
 	<!-- Define your beans here -->
 
@@ -22,28 +21,17 @@
 	</bean>
 
 	<!-- Coach with base ballcoach bean -->
-	<bean id="myCoach" class="com.springdemo.CrictetCoach">
 
 
-		<!-- if consttructor dependency then <constructor-args ref="myFortune"></constructor-args> -->
-
-
-		<!-- setting to setFortuneService method in crictecoach and sendig myfortune 
-			which is happyfortune obj to seeterr method -->
-		<property name="FortuneService" ref="myFortune"></property>
-
-		<!-- setting literals using setter methods -->
-		<property name="Team" value="${foo.team}"></property>
-		<property name="EmailAddress" value="${foo.email}"></property>
-
-
-
-	</bean>
-
-	<bean id="bbCoach" class="com.springdemo.Baseballcoach">
+	<bean id="bbCoach" class="com.springdemo.Baseballcoach" scope="prototype">
 
 		<constructor-arg ref="myFortune"></constructor-arg>
 
+	</bean>
+	
+	<bean id="tcCoach" class="com.springdemo.TrackCoach" init-method="sayinit" destroy-method="destroymeth">
+	<constructor-arg ref="myFortune"></constructor-arg>
+	
 	</bean>
 </beans>
 

@@ -8,7 +8,7 @@ public class HelloSpringApp {
 		// TODO Auto-generated method stub
 		//load the spring configuration file
 		
-		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
 		
 		//retreive bean
 		
